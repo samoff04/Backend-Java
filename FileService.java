@@ -1,16 +1,15 @@
 import java.io.*;
-
 public class FileService
 {
-    static String filePath="users.txt";
+    static String filePath="products.txt";
 
     public static void save()
     {
         try(BufferedWriter bw=new BufferedWriter(new FileWriter(filePath)))
         {
-            for (User u:BackendService.getAllUsers())
+            for (Product p:ProductService.getAllProducts())
             {
-                bw.write(u.id+","+u.name+","+u.email);
+                bw.write(p.id+","+p.name+","+p.price+","+p.quantity);
                 bw.newLine();
             }
         }
@@ -28,14 +27,19 @@ public class FileService
             while((line=br.readLine())!=null)
             {
                 String[] p=line.split(",");
-                BackendService.addUser(
-                    new User(Integer.parseInt(p[0]),p[1],p[2])
+                ProductService.addProduct(
+                    new Product(
+                        Integer.parseInt(p[0]),
+                        p[1],
+                        Double.parseDouble(p[2]),
+                        Integer.parseInt(p[3])
+                    )
                 );
             }
         }
         catch(Exception e)
         {
-            System.out.println("No previous data");
+            System.out.println("No existing products");
         }
     }
 }
