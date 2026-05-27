@@ -1,4 +1,4 @@
-# Java Backend Journey
+# Java Backend
 
 This repository contains my backend learning projects built using Core Java, JDBC and Spring Boot.
 
