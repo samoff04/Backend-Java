@@ -4,9 +4,9 @@ This repository contains my backend learning projects built using Core Java, JDB
 
 ## Projects
 
-1. User Management Backend (Core Java + File Handling)
-2. Product Management Backend
-3. JDBC CRUD Application
-4. Spring Boot REST API
+- User Management Backend (Core Java + File Handling)
+- Product Management Backend
+- JDBC CRUD Application
+- Spring Boot REST API
 
 Each project is organized in its own folder.
