@@ -1,5 +1,17 @@
 *.class
+
 .idea/
 .vscode/
+*.iml
+
 out/
 target/
+bin/
+build/
+
+*.log
+*.tmp
+*.swp
+
+.DS_Store
+Thumbs.db
